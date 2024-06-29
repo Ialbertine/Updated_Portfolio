@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Albertine's Portfolio</title>
+    <link rel="stylesheet" href="output.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <style>
+      .underline-animation {
+        position: relative;
+      }
+      .underline-animation::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 0;
+        height: 2px;
+        background-color: blue;
+        transition: width 0.6s ease-in-out;
+      }
+      .underline-animation:hover::after, .underline-animation.active::after {
+        width: 100%;
+      }
+
+      @media screen and (max-width: 768px) {
+        .nav-menu {
+          display: none;
+          position: absolute;
+          top: 10%;
+          left: 0;
+          width: 100%;
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+          z-index: 1;
+          padding: 1rem;
+          height: calc(100vh - 20%);
+          overflow: hidden;
+          padding-left: 30px;
+          transition: all 0.5s ease-in-out;
+        }
+
+        .nav-menu.active {
+          height: calc(100vh - 10%);
+          display: block;
+        }
+
+        .nav-menu ul {
+          display: flex;
+          flex-direction: column;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+        .nav-menu li {
+          margin-bottom: 1rem; /* Add space between lines */
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-white text-black">
+    <div class="lg:px-[2rem]">
+      <nav class="flex items-center justify-between py-2 px-4">
+        <div class="text-3xl font-bold">
+          <a href="#"><span class="text-[blue]">T</span>~Alby</a>
+        </div>
+          <ul class="hidden lg:flex nav-menu gap-8 text-[17px]">
+            <li><a href="#" class="cursor-pointer transition duration-300 ease-in-out font-medium underline-animation active">Home</a></li>
+            <li><a href="#about" class="cursor-pointer transition duration-300 ease-in-out font-medium underline-animation">About</a></li>
+            <li><a href="#service" class="cursor-pointer transition duration-300 ease-in-out font-medium underline-animation">Services</a></li>
+            <li><a href="#Projects" class="cursor-pointer transition duration-300 ease-in-out font-medium underline-animation">Projects</a></li>
+            <li><a href="#Contact" class="cursor-pointer transition duration-300 ease-in-out font-medium underline-animation">Contact</a></li>
+            <li><a href="#Blogs" class="cursor-pointer transition duration-300 ease-in-out font-medium underline-animation">Blogs</a></li>
+          </ul>
+        <div class="flex gap-2 sm:gap-8 duration-300 ease-in-out">
+          <ion-icon name="sunny" id="toggle-dark-mode" class="cursor-pointer text-3xl"></ion-icon>
+          <ion-icon name="menu" id="menu-icon" class="lg:hidden cursor-pointer text-3xl"></ion-icon>
+        </div>
+      </nav>
+      <header class="">
+        <div class="">
+          <span>Hello There!</span>
+        </div>
+        <div class="">
+          I'm<span class="">Albertine</span>
+          a Frontend Developer
+        </div>
+        <div class="">
+          <p class="">Welcome to my Portfolio, a dedicated Front-end developer
+            that is passionate about creating engaging and user-friendly
+            digital experiences.</p>
+            <a href="./imgs/Albertine_Ingabire_CV.pdf" download="Albertine_Ingabire_CV"><button
+              class="button">Download Cv</button></a>
+        </div>
+      </header>
+    </div>
+
+    <script src="portfolio.js"></script>
+  </body>
+</html>

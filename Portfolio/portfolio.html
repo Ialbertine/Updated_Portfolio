@@ -9,6 +9,13 @@
       type="module"
       src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
     ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css"
+        integrity="sha512-siarrzI1u3pCqFG2LEzi87McrBmq6Tp7juVsdmGY1Dr8Saw+ZBAzDzrGwX3vgxX1NkioYNCFOVC0GpDPss10zQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"   />
     <script
       nomodule
       src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.js"
@@ -32,7 +39,27 @@
       .underline-animation.active::after {
         width: 100%;
       }
+      .square-border {
+        width: 23rem; 
+        height: 25rem; 
+        position: relative;
+      }
 
+      .border-line {
+        position: absolute;
+        top: 10px;
+        left: 10px; 
+        width: calc(100% - 20px);
+        height: calc(100% - 20px); 
+        border: 2px solid #3b14d7; 
+      }
+
+      .square-border img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
       @media screen and (max-width: 768px) {
         .nav-menu {
           display: none;
@@ -67,7 +94,7 @@
       }
     </style>
   </head>
-  <body class="bg-white text-black font-[poppins] ">
+  <body class="bg-white text-black font-[poppins] w-full min-h-screen">
     <div class="lg:px-[4rem] min-h-screen w-full">
       <nav class="flex items-center justify-between py-2 px-4">
         <div class="text-3xl font-bold">
@@ -130,8 +157,8 @@
           ></ion-icon>
         </div>
       </nav>
-      <header class="flex pt-[6rem] sm:pl-[1.5rem]">
-        <div class="flex flex-col justify-start h-full w-full">
+      <header class="flex pt-[6rem] sm:pl-[1.5rem] lg:px-[4rem]">
+        <div class="flex flex-col justify-start h-full w-full lg:pt-[1.5rem]">
           <div class="text-xl text-[gray] font-medium">
             <span>Hello There!</span>
           </div>
@@ -147,17 +174,198 @@
               passionate about creating engaging and user-friendly digital
               experiences.
             </p>
+            <section class="flex mt-3">
+              <div class="flex items-center">
+                <a href="" class="w-8 h-8 flex items-center justify-center bg-[black] rounded-full">
+                  <i class="fa-brands fa-github text-white"></i>
+                </a>
+              </div>
+              <div class="ml-3 flex items-center">
+                <a href="" class="w-8 h-8 flex items-center justify-center bg-[blue] rounded-full">
+                  <i class="fa-brands fa-linkedin text-white"></i>
+                </a>
+              </div>
+              <div class="ml-3 flex items-center">
+                <a href="" class="w-8 h-8 flex items-center justify-center bg-[black] rounded-full">
+                  <i class="fa-brands fa-x-twitter text-white"></i>
+                </a>
+              </div>
+              <div class="ml-3 flex items-center">
+                <a href="" class="w-8 h-8 flex items-center justify-center rounded-full" style="background: linear-gradient(45deg, #f7b733 0%, #fc4a1a 50%, #d6249f 100%);">
+                  <i class="fa-brands fa-instagram text-white"></i>
+                </a>
+              </div>
+                           
+              <div class="ml-3 flex items-center">
+                <a href="" class="w-8 h-8 flex items-center justify-center bg-[red] rounded-full">
+                  <i class="fa-brands fa-pinterest text-white"></i>
+                </a>
+              </div>
+            </section>
+            <section class="mt-3">            
             <a
               href="./imgs/Albertine_Ingabire_CV.pdf"
               download="Albertine_Ingabire_CV"
-              ><button class="bg-[#efd007] hover:bg-[#d5ab49] text-black transition duration-300 ease-in-out font-medium py-2 px-4 rounded-md mt-2">Download Cv</button></a
+              ><button
+                class="bg-[#efd007] hover:bg-[#d5ab49] text-black transition duration-300 ease-in-out font-medium py-3 px-5 rounded-3xl mt-2"
+              >
+              <i class="fa-solid fa-user"></i> More about me
+              </button></a
             >
+          </section> 
           </div>
+        </div>
+        <div class="hidden lg:flex items-center justify-center w-full h-full">
+          <div class="rounded-full bg-[#4955d5] border-2 border-[#4955d5] p-2 flex items-center justify-center">
+            <img
+              src="img/tina.jpg"
+              alt="alby"
+              class="rounded-full border-2 border-[#4955d5] bg-cover h-[300px] w-[300px] bg-center object-cover"
+            />
           </div>
-          <div class="hidden lg:flex items-center justify-center w-full h-full">
-            <img src="img/tina.jpg" alt="alby" class="rounded-full bg-cover h-[300px] w-[300px] bg-center object-cover" />
-          </div>    
+        </div>
+        </div>
       </header>
+      <main class="flex flex-col items-center justify-center w-full h-full">
+        <h1 class="text-5xl lg:pt-[5rem] pt-[4rem] font-extrabold">
+          ABOUT <span class="text-[blue]">ME</span>
+        </h1>
+        <div class="flex items-center pt-[2rem]">
+          <hr class="md:bg-[#532be2] md:border-[3px] md:border-[#532be2] md:w-[10%]" />
+          <p class="whitespace-nowrap ml-2">
+            I DESIGN AND CODE BEAUTIFUL THINGS, AND I LOVE WHAT I DO.
+          </p>
+          <hr class="md:bg-[#532be2] md:border-[3px] md:border-[#532be2] md:w-[10%]" />
+        </div>
+        <div class="flex flex-col items-center justify-between lg:flex-row mt-[2rem]">
+          <div class="square-border">
+            <div class="border-line"></div>
+            <img
+              src="img/tina.jpg"
+              alt="tina"
+              class="w-[23rem] h-[25rem] object-cover"
+            />
+          </div>          
+          <div class="flex flex-col lg:pl-[1.5rem]">
+            <p class="w-[30rem] text-center mt-[1rem] sm:flex sm:items-center sm:text-justify">
+              I am a front-end developer, my passion is creating engaging and
+              user-friendly digital experiences. I am driven to create websites
+              that are both practical and visually appealing because I love the
+              process of turning design thoughts into reality. and I like the
+              challenge of keeping up with the ever changing web technology
+            </p>
+            <div class="flex flex-cols-2 items-center justify-center gap-x-[10rem] mt-4 lg:mt-4">
+              <div class="text-left">
+                <span class="block">
+                  <span class="text-xl">First Name</span>
+                  <br />
+                  Albertine
+                </span>
+                <span class="block mt-4">
+                  <span class="text-xl">Last Name</span>
+                  <br />
+                  Ingabire
+                </span>
+              </div>
+              <div class="text-left">
+                <span class="block">
+                  <span class="text-xl">Nationality</span>
+                  <br />
+                  Rwandan
+                </span>
+                <span class="block mt-4">
+                  <span class="text-xl">Birthdate</span>
+                  <br />
+                  19 Sept 2024
+                </span>
+              </div>
+            </div>
+            <div class="flex items-center justify-center mt-[2rem]">
+              <a href="./imgs/Albertine_Ingabire_CV.pdf" download="Albertine_Ingabire_CV">
+              <button class="py-2 px-6 gap-2 bg-[#e2bd2b] flex items-center justify-center rounded-xl">
+                <i class="fa-solid fa-download"></i>
+                <span class="text-black">Download CV</span>
+              </button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <section class="overflow-hidden flex flex-col items-center justify-center min-h-screen">
+          <div class="text-5xl font-bold pb-[3rem]">
+            <h1 id="service"><span class="text-blue-500">My</span> Services</h1>
+          </div>
+          <section class="relative flex items-center justify-center w-full ">
+            <button id="prev" class="left-0 text-3xl p-2 bg-indigo-800 text-white rounded-full">‹</button>
+            <div class=" w-full flex transition-transform duration-500 ease-in-out overflow-hidden">
+              <div class="card w-full sm:w-[20rem] h-[20rem] flex-none p-4 bg-indigo-800 text-white flex flex-col items-center mx-4 rounded-lg">
+                <i class="fa-brands fa-react text-yellow-300 text-4xl mb-4"></i>
+                <div class="content">
+                  <h3 class="text-xl font-semibold mb-2 text-center">Web Development</h3>
+                  <p class="text-justify">Using a combination of front-end and back-end technologies, web development includes the design and upkeep of websites and online applications. Front-end developers employ HTML, CSS, and JavaScript to create interactive and aesthetically pleasing pieces that consumers can interact with directly.</p>
+                </div>
+              </div>
+              <div class="card w-full sm:w-[20rem] h-[20rem] flex-none p-4 bg-indigo-800 text-white flex flex-col items-center mx-4 rounded-lg">
+                <i class="fas fa-code text-yellow-300 text-4xl mb-4"></i>
+                <div class="content">
+                  <h3 class="text-xl font-semibold mb-2 text-center">Software Engineering</h3>
+                  <p class="text-justify">Software engineering involves the systematic design, development, testing, and maintenance of software systems. It covers every step of the software development lifecycle, from original design and idea to coding, testing, and deployment.</p>
+                </div>
+              </div>
+              <div class="card w-full sm:w-[20rem] h-[20rem] flex-none p-4 bg-indigo-800 text-white flex flex-col items-center mx-4 rounded-lg">
+                <i class="fa-solid fa-palette text-yellow-300 text-4xl mb-4"></i>
+                <div class="content">
+                  <h3 class="text-xl font-semibold mb-2 text-center">Web Design</h3>
+                  <p class="text-justify">Web design involves the creative and artistic elements of creating aesthetically pleasing and user-friendly websites. To produce an interesting and useful user interface, designers combine color schemes and visual design concepts.</p>
+                </div>
+              </div>
+              <div class="card w-full sm:w-[20rem] h-[20rem] flex-none p-4 bg-indigo-800 text-white flex flex-col items-center mx-4 rounded-lg">
+                <i class="fa-solid fa-pencil-ruler text-yellow-300 text-4xl mb-4"></i>
+                <div class="content">
+                  <h3 class="text-xl font-semibold mb-2 text-center">UI/UX Design</h3>
+                  <p class="text-justify">UI/UX design focuses on the user's interaction with a product. UI design involves the creation of interfaces that are visually appealing and easy to use, while UX design ensures that the overall experience is smooth, intuitive, and satisfying.</p>
+                </div>
+              </div>
+            </div>
+            <button id="next" class=" right-0 text-3xl p-2 bg-indigo-800 text-white rounded-full">›</button>
+          </section>
+        </section>
+        <div class="max-w-screen-lg mx-auto p-4 flex flex-col items-center w-full min-h-screen">
+          <h1 class="text-4xl font-bold mt-6">SKILLS</h1>
+          <div class="grid grid-cols-3 gap-x-5 gap-y-5 lg:gap-x-[2rem] lg:gap-y-[2rem] mt-6">
+            <!-- HTML for each skill card -->
+            <div class="w-[8.5rem] md:w-[12rem] lg:w-[18rem] shadow-md hover:shadow-[#694888] duration-500 py-2 rounded-lg flex flex-col items-center">
+              <img src="img/html-icon.svg" alt="HTML" class="w-20 max-auto mt-6">
+              <span class="text-center mt-2">HTML</span>
+            </div>
+        
+            <div class="w-[8.5rem] md:w-[12rem] lg:w-[18rem] shadow-md hover:shadow-[#694888] duration-500 py-2 rounded-lg flex flex-col items-center">
+              <img src="img/css-icon.svg" alt="CSS3" class="w-20 max-auto mt-6">
+              <span class="text-center mt-2">CSS3</span>
+            </div>
+        
+            <div class="w-[8.5rem] md:w-[12rem] lg:w-[18rem] shadow-md hover:shadow-[#694888]  duration-500 py-2 rounded-lg flex flex-col items-center">
+              <img src="img/javascript-programming-language-icon.svg" alt="JavaScript" class="w-20 max-auto mt-6">
+              <span class="text-center mt-2">JavaScript</span>
+            </div>
+        
+            <div class="w-[8.5rem] md:w-[12rem] lg:w-[18rem] shadow-md hover:shadow-[#694888]  duration-500 py-2 rounded-lg flex flex-col items-center">
+              <img src="img/react-js-icon.svg" alt="React JS" class="w-20 max-auto mt-6">
+              <span class="text-center mt-2">React JS</span>
+            </div>
+        
+            <div class="w-[8.5rem] md:w-[12rem] lg:w-[18rem] shadow-md hover:shadow-[#694888] duration-500 py-2 rounded-lg flex flex-col items-center">
+              <img src="img/tailwind-css-icon.svg" alt="Tailwind CSS" class="w-20 max-auto mt-6">
+              <span class="text-center mt-2">Tailwind CSS</span>
+            </div>
+        
+            <div class="w-[8.5rem] md:w-[12rem] lg:w-[18rem] shadow-md hover:shadow-[#694888] duration-500 py-2 rounded-lg flex flex-col items-center">
+              <img src="img/github.svg" alt="GitHub" class="w-20 max-auto mt-6">
+              <span class="text-center mt-2">GitHub</span>
+            </div>
+          </div>
+        </div>
+        
+      </main>
     </div>
 
     <script src="portfolio.js"></script>

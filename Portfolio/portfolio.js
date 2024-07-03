@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let isMenuOpen = false;
 
   toggleDarkModeBtn.addEventListener('click', () => {
-    document.body.classList.toggle('bg-[#03002e]');
+    document.body.classList.toggle('bg-[black]');
     document.body.classList.toggle('text-gray-100');
     document.body.classList.toggle('bg-gray-100');
     document.body.classList.toggle('text-black');
@@ -32,4 +32,47 @@ document.addEventListener("DOMContentLoaded", function () {
       menuIcon.setAttribute("name", "menu");
     }
   });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.card');
+  let currentIndex = 0;
+
+  const updateCards = () => {
+    const isSmallScreen = window.innerWidth < 640; // Tailwind's sm breakpoint is 640px
+    const cardsPerPage = isSmallScreen ? 1 : 2;
+
+    cards.forEach((card, index) => {
+      if (index >= currentIndex && index < currentIndex + cardsPerPage) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  };
+
+  document.getElementById('next').addEventListener('click', () => {
+    const isSmallScreen = window.innerWidth < 640; // Tailwind's sm breakpoint is 640px
+    const cardsPerPage = isSmallScreen ? 1 : 2;
+
+    currentIndex = (currentIndex + cardsPerPage) % cards.length;
+    if (currentIndex + cardsPerPage > cards.length) {
+      currentIndex = cards.length - cardsPerPage;
+    }
+    updateCards();
+  });
+
+  document.getElementById('prev').addEventListener('click', () => {
+    const isSmallScreen = window.innerWidth < 375; 
+    const cardsPerPage = isSmallScreen ? 1 : 2;
+
+    currentIndex = (currentIndex - cardsPerPage + cards.length) % cards.length;
+    if (currentIndex < 0) {
+      currentIndex = 0;
+    }
+    updateCards();
+  });
+
+  window.addEventListener('resize', updateCards); 
+  updateCards(); 
 });

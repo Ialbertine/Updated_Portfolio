@@ -5,15 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Albertine's Portfolio</title>
     <link rel="stylesheet" href="output.css" />
-    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
 
     <style>
       .underline-animation {
         position: relative;
       }
       .underline-animation::after {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         bottom: -4px;
@@ -22,7 +28,8 @@
         background-color: blue;
         transition: width 0.6s ease-in-out;
       }
-      .underline-animation:hover::after, .underline-animation.active::after {
+      .underline-animation:hover::after,
+      .underline-animation.active::after {
         width: 100%;
       }
 
@@ -55,45 +62,101 @@
           padding: 0;
         }
         .nav-menu li {
-          margin-bottom: 1rem; /* Add space between lines */
+          margin-bottom: 1rem;
         }
       }
     </style>
   </head>
-  <body class="bg-white text-black">
-    <div class="lg:px-[2rem]">
+  <body class="bg-white text-black font-[poppins] ">
+    <div class="lg:px-[4rem] min-h-screen w-full">
       <nav class="flex items-center justify-between py-2 px-4">
         <div class="text-3xl font-bold">
           <a href="#"><span class="text-[blue]">T</span>~Alby</a>
         </div>
-          <ul class="hidden lg:flex nav-menu gap-8 text-[17px]">
-            <li><a href="#" class="cursor-pointer transition duration-300 ease-in-out font-medium underline-animation active">Home</a></li>
-            <li><a href="#about" class="cursor-pointer transition duration-300 ease-in-out font-medium underline-animation">About</a></li>
-            <li><a href="#service" class="cursor-pointer transition duration-300 ease-in-out font-medium underline-animation">Services</a></li>
-            <li><a href="#Projects" class="cursor-pointer transition duration-300 ease-in-out font-medium underline-animation">Projects</a></li>
-            <li><a href="#Contact" class="cursor-pointer transition duration-300 ease-in-out font-medium underline-animation">Contact</a></li>
-            <li><a href="#Blogs" class="cursor-pointer transition duration-300 ease-in-out font-medium underline-animation">Blogs</a></li>
-          </ul>
+        <ul class="hidden lg:flex nav-menu gap-8 text-[17px]">
+          <li>
+            <a
+              href="#"
+              class="cursor-pointer transition duration-300 ease-in-out font-medium underline-animation active"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="cursor-pointer transition duration-300 ease-in-out font-medium underline-animation"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#service"
+              class="cursor-pointer transition duration-300 ease-in-out font-medium underline-animation"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="#Projects"
+              class="cursor-pointer transition duration-300 ease-in-out font-medium underline-animation"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#Contact"
+              class="cursor-pointer transition duration-300 ease-in-out font-medium underline-animation"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a
+              href="#Blogs"
+              class="cursor-pointer transition duration-300 ease-in-out font-medium underline-animation"
+              >Blogs</a
+            >
+          </li>
+        </ul>
         <div class="flex gap-2 sm:gap-8 duration-300 ease-in-out">
-          <ion-icon name="sunny" id="toggle-dark-mode" class="cursor-pointer text-3xl"></ion-icon>
-          <ion-icon name="menu" id="menu-icon" class="lg:hidden cursor-pointer text-3xl"></ion-icon>
+          <ion-icon
+            name="sunny"
+            id="toggle-dark-mode"
+            class="cursor-pointer text-3xl"
+          ></ion-icon>
+          <ion-icon
+            name="menu"
+            id="menu-icon"
+            class="lg:hidden cursor-pointer text-3xl"
+          ></ion-icon>
         </div>
       </nav>
-      <header class="">
-        <div class="">
-          <span>Hello There!</span>
-        </div>
-        <div class="">
-          I'm<span class="">Albertine</span>
-          a Frontend Developer
-        </div>
-        <div class="">
-          <p class="">Welcome to my Portfolio, a dedicated Front-end developer
-            that is passionate about creating engaging and user-friendly
-            digital experiences.</p>
-            <a href="./imgs/Albertine_Ingabire_CV.pdf" download="Albertine_Ingabire_CV"><button
-              class="button">Download Cv</button></a>
-        </div>
+      <header class="flex pt-[6rem] sm:pl-[1.5rem]">
+        <div class="flex flex-col justify-start h-full w-full">
+          <div class="text-xl text-[gray] font-medium">
+            <span>Hello There!</span>
+          </div>
+          <div class="flex text-5xl font-semibold mt-2">
+            I'm<span class="pl-2 text-[#4955d5]"> Albertine</span>
+          </div>
+          <div class="mt-2">
+            <span class="text-5xl font-semibold">a Front-end Developer</span>
+          </div>
+          <div class="mt-2">
+            <p class="sm:w-[68%] lg:w-[80%] text-xl">
+              Welcome to my Portfolio, a dedicated Front-end developer that is
+              passionate about creating engaging and user-friendly digital
+              experiences.
+            </p>
+            <a
+              href="./imgs/Albertine_Ingabire_CV.pdf"
+              download="Albertine_Ingabire_CV"
+              ><button class="bg-[#efd007] hover:bg-[#d5ab49] text-black transition duration-300 ease-in-out font-medium py-2 px-4 rounded-md mt-2">Download Cv</button></a
+            >
+          </div>
+          </div>
+          <div class="hidden lg:flex items-center justify-center w-full h-full">
+            <img src="img/tina.jpg" alt="alby" class="rounded-full bg-cover h-[300px] w-[300px] bg-center object-cover" />
+          </div>    
       </header>
     </div>
 

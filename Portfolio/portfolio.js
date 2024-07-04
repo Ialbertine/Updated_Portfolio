@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let isMenuOpen = false;
 
   toggleDarkModeBtn.addEventListener('click', () => {
-    document.body.classList.toggle('bg-[black]');
+    document.body.classList.toggle('bg-[#03002e]');
     document.body.classList.toggle('text-gray-100');
     document.body.classList.toggle('bg-gray-100');
     document.body.classList.toggle('text-black');

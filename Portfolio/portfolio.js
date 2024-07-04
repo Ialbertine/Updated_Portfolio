@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   document.getElementById('next').addEventListener('click', () => {
-    const isSmallScreen = window.innerWidth < 640; // Tailwind's sm breakpoint is 640px
+    const isSmallScreen = window.innerWidth < 375; 
     const cardsPerPage = isSmallScreen ? 1 : 2;
 
     currentIndex = (currentIndex + cardsPerPage) % cards.length;
@@ -75,4 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('resize', updateCards); 
   updateCards(); 
+});
+
+AOS.init({
+  duration: 1000, 
+  once: true 
 });
